@@ -12,10 +12,10 @@ public class Cajero_Automatico {
         double retiro;
         double saldoFinal;
 
-        System.out.println("Ingresa tu saldo disponible : $ ");
+        System.out.println("Ingresa tu saldo disponible : ");
         saldo = scanner.nextDouble();
 
-        System.out.println("Ingresa la cantidad que deseas retirar : $ ");
+        System.out.println("Ingresa la cantidad que deseas retirar : ");
         retiro = scanner.nextDouble();
 
         if (retiro <= 0) {
