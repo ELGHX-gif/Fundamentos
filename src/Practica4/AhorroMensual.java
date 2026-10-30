@@ -106,7 +106,5 @@ public class AhorroMensual {
             }
 
         } while (rep == REP);
-
-        scanner.close();
     }
 }

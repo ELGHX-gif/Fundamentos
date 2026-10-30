@@ -119,6 +119,5 @@ public class Competencia {
 
         } while (rep == REPETIR);
 
-        scanner.close();
     }
 }
