@@ -14,6 +14,7 @@ public class AhorroMensual {
 
         int rep;
 
+        do {
             double dineroI;
             double meta;
             double ahorroMensual;
@@ -103,5 +104,9 @@ public class AhorroMensual {
                 System.out.println("Escribe 1 o 0: ");
                 rep = scanner.nextInt();
             }
+
+        } while (rep == REP);
+
+        scanner.close();
     }
 }

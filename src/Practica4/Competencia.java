@@ -17,6 +17,7 @@ public class Competencia {
 
         int rep;
 
+        do {
             int participantes;
 
             System.out.println("Escribe la cantidad de participantes: ");
@@ -111,9 +112,13 @@ public class Competencia {
             System.out.println("Quieres registrar otra competencia? (1 si / 0 no): ");
             rep = scanner.nextInt();
 
-            while (rep != 0 && rep!= 1) {
+            while (rep != 0 && rep != 1) {
                 System.out.println("Escribe 1 o 0: ");
                 rep = scanner.nextInt();
             }
+
+        } while (rep == REPETIR);
+
+        scanner.close();
     }
 }

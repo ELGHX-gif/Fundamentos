@@ -12,6 +12,7 @@ public class SecuenciaNumerica {
 
         int rep;
 
+        do {
             int n;
             System.out.println("Escribe un numero positivo: ");
             n = scanner.nextInt();
@@ -87,5 +88,8 @@ public class SecuenciaNumerica {
                 System.out.println("Escribe 1 o 0: ");
                 rep = scanner.nextInt();
             }
+
+        } while (rep == 1);
+
     }
 }

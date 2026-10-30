@@ -14,6 +14,7 @@ public class NumerosAmigos {
 
         int rep;
 
+        do {
             int numero1;
             int numero2;
 
@@ -99,5 +100,8 @@ public class NumerosAmigos {
                 rep = teclado.nextInt();
             }
 
+        } while (rep == REPETIR);
+
+        teclado.close();
     }
 }
