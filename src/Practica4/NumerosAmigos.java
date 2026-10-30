@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class NumerosAmigos {
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         final int INICIO = 1;
         final int DIVISOR_INICIAL = 1;
@@ -19,19 +19,19 @@ public class NumerosAmigos {
             int numero2;
 
             System.out.println("Escribe el primer numero: ");
-            numero1 = teclado.nextInt();
+            numero1 = scanner.nextInt();
 
             while (numero1 <= 0) {
                 System.out.println("Ingresa un numero positivo: ");
-                numero1 = teclado.nextInt();
+                numero1 = scanner.nextInt();
             }
 
             System.out.println("Escribe el segundo numero: ");
-            numero2 = teclado.nextInt();
+            numero2 = scanner.nextInt();
 
             while (numero2 <= 0) {
                 System.out.println("Ingresa un numero positivo: ");
-                numero2 = teclado.nextInt();
+                numero2 = scanner.nextInt();
             }
 
             int suma1 = 0;
@@ -66,7 +66,7 @@ public class NumerosAmigos {
             System.out.println("1. Mostrar las sumas de los divisores");
             System.out.println("2. Mostrar solamente si son amigos");
 
-            int opcion = teclado.nextInt();
+            int opcion = scanner.nextInt();
 
             switch (opcion) {
                 case OPCION_SUMAS:
@@ -93,15 +93,14 @@ public class NumerosAmigos {
             }
 
             System.out.println("Quieres analizar otra pareja? (1 si / 0 no): ");
-            rep = teclado.nextInt();
+            rep = scanner.nextInt();
 
             while (rep != 0 && rep != 1) {
                 System.out.println("Escribe 1 o 0: ");
-                rep = teclado.nextInt();
+                rep = scanner.nextInt();
             }
 
         } while (rep == REPETIR);
 
-        teclado.close();
     }
 }
