@@ -1,3 +1,10 @@
+/*
+*Generador de CURP
+* Hernandez Medina Gustavo
+* Viernes 13 de Noviembre del 2026
+* Instituto Tecnologico de Pachuca
+*/
+
 package CURP;
 import java.util.Scanner;
 
