@@ -77,8 +77,7 @@ public class CURP {
 
             char letra = palabra.charAt(i);
 
-            if (letra == 'A' || letra == 'E' || letra == 'I'
-                    || letra == 'O' || letra == 'U') {
+            if (letra == 'A' || letra == 'E' || letra == 'I' || letra == 'O' || letra == 'U') {
 
                 return "" + letra;
             }
@@ -93,8 +92,7 @@ public class CURP {
 
             char letra = palabra.charAt(i);
 
-            if (letra != 'A' && letra != 'E' && letra != 'I'
-                    && letra != 'O' && letra != 'U') {
+            if (letra != 'A' && letra != 'E' && letra != 'I' && letra != 'O' && letra != 'U') {
 
                 return "" + letra;
             }
@@ -153,8 +151,7 @@ public class CURP {
         }
     }
 
-    public static String generarCURP(String nom, String paterno,
-                                     String materno, String nacimiento, String genero, String entidad) {
+    public static String generarCURP(String nom, String paterno, String materno, String nacimiento, String genero, String entidad) {
 
         String curp = "";
 
