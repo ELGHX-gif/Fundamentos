@@ -1,5 +1,4 @@
 package CURP;
-
 import java.util.Scanner;
 
 public class CURP {
@@ -7,24 +6,23 @@ public class CURP {
     static Scanner entrada = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("==============BIENVENIDO A NUESTRO SISTEMA DE CURP ==============");
 
-        System.out.println("FAVOR DE ESCRIBIR LOS DATOS EN MAYUSCULAS, GRACIAS.");
+        System.out.println("GENERADOR DE CURP");
 
         System.out.print("Nombre: ");
-        String nom = entrada.nextLine();
+        String nom = entrada.nextLine().toUpperCase();
 
         System.out.print("Apellido paterno: ");
-        String paterno = entrada.nextLine();
+        String paterno = entrada.nextLine().toUpperCase();
 
         System.out.print("Apellido materno: ");
-        String materno = entrada.nextLine();
+        String materno = entrada.nextLine().toUpperCase();
 
         System.out.print("Fecha de nacimiento (DD/MM/AAAA): ");
         String nacimiento = entrada.nextLine();
 
         System.out.print("Sexo (H o M): ");
-        String genero = entrada.nextLine();
+        String genero = entrada.nextLine().toUpperCase();
 
         System.out.println("Entidad federativa:");
         System.out.println("AGUASCALIENTES");
@@ -61,9 +59,10 @@ public class CURP {
         System.out.println("ZACATECAS");
 
         System.out.print("Escribe tu estado: ");
-        String entidad = entrada.nextLine();
+        String entidad = entrada.nextLine().toUpperCase();
 
-        String resultado = generarCURP(nom, paterno, materno, nacimiento, genero, entidad);
+        String resultado = generarCURP(nom, paterno, materno,
+                nacimiento, genero, entidad);
 
         System.out.println("CURP Generada: " + resultado);
     }
@@ -78,7 +77,9 @@ public class CURP {
 
             char letra = palabra.charAt(i);
 
-            if (letra == 'A' && letra == 'E' && letra == 'I' && letra == 'O' && letra == 'U') {
+            if (letra == 'A' || letra == 'E' || letra == 'I'
+                    || letra == 'O' || letra == 'U') {
+
                 return "" + letra;
             }
         }
@@ -92,7 +93,8 @@ public class CURP {
 
             char letra = palabra.charAt(i);
 
-            if (letra != 'A' && letra != 'E' && letra != 'I' && letra != 'O' && letra != 'U') {
+            if (letra != 'A' && letra != 'E' && letra != 'I'
+                    && letra != 'O' && letra != 'U') {
 
                 return "" + letra;
             }
@@ -151,7 +153,8 @@ public class CURP {
         }
     }
 
-    public static String generarCURP(String nom, String paterno, String materno, String nacimiento, String genero, String entidad) {
+    public static String generarCURP(String nom, String paterno,
+                                     String materno, String nacimiento, String genero, String entidad) {
 
         String curp = "";
 
@@ -168,7 +171,7 @@ public class CURP {
         curp += obtenerPrimeraConsonante(materno);
         curp += obtenerPrimeraConsonante(nom);
 
-        curp += "01";
+        curp += "26";
 
         return curp;
     }
